@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Unknowntalent/testspringcloud.git
+          search-paths: config
+          username: Unknowntalent
+          password: Tao1008611
+      label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
